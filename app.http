@@ -1,0 +1,66 @@
+// API 1
+GET http://localhost:3000/todos
+
+### 
+
+GET http://localhost:3000/todos/?status=TO%20DO
+
+### 
+
+GET http://localhost:3000/todos/?priority=HIGH
+
+### 
+
+GET http://localhost:3000/todos/?priority=HIGH&status=IN%20PROGRESS
+
+###
+
+GET http://localhost:3000/todos/?search_q=Play
+
+###
+// API 2 
+GET http://localhost:3000/todos/2/
+
+### 
+// API 3
+POST http://localhost:3000/todos/ 
+Content-Type: application/json
+
+{
+  "id": 11,
+  "todo": "Meeting a Friend",
+  "priority": "LOW",
+  "status": "IN PROGRESS"
+}
+
+###
+// API 5 
+DELETE http://localhost:3000/todos/11/
+
+### 
+// API 4
+
+PUT http://localhost:3000/todos/2/
+Content-Type: application/json
+
+{
+  "status": "DONE"
+}
+
+###
+PUT http://localhost:3000/todos/4/
+Content-Type: application/json
+
+{
+  "priority": "HIGH"
+}
+
+### 
+PUT http://localhost:3000/todos/2/
+Content-Type: application/json
+
+{
+  "todo": "Some task"
+}
+
+###
